@@ -1,0 +1,29 @@
+{
+    "name": "twitterclone",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Marko193/twitterClone.git"
+    },
+    "author": "Marko Pavlenko",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Marko193/twitterClone/issues"
+    },
+    "homepage": "https://github.com/Marko193/twitterClone#readme",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "mongodb": "^3.6.4",
+        "mongoose": "^5.11.17",
+        "nodemon": "^2.0.7",
+        "pug": "^3.0.0"
+    }
+}
