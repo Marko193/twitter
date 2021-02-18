@@ -6,6 +6,7 @@ const middleware = require('./middleware');
 const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+
 dotenv.config({ path: './config.env' });
 
 app.set('view engine', 'pug');
@@ -28,3 +29,5 @@ app.get('/', middleware.requireLogin, (req, res, next) => {
     }
     res.status(200).render('home', payload);
 });
+
+module.exports = app;
