@@ -10,7 +10,6 @@ dotenv.config({ path: './config.env' });
 
 app.set('view engine', 'pug');
 app.set('views', 'views');
-s
 
 app.use(bodyParser.urlencoded({ extended: false }));
 //connection to the static public files
