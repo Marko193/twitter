@@ -1,3 +1,5 @@
+/*css variables*/
+
 :root {
     --blue: #1FA2F1;
     --blueLight: #9BD1F9;
@@ -6,14 +8,15 @@
     --lightGrey: rgb(230, 236, 240);
     --spacing: 15px;
     --greyText: rgb(101, 119, 134);
-    --greyButtonText: rgba(0,0,0,0.34);
-    --red: rgb(226,34,94);
-    --redBackground: rgba(226,34,94,0.1);
-    --green: rgb(23,191,99);
-    --greenBackground: rgba(23,191,99,0.1);
+    --greyButtonText: rgba(0, 0, 0, 0.34);
+    --red: rgb(226, 34, 94);
+    --redBackground: rgba(226, 34, 94, 0.1);
+    --green: rgb(23, 191, 99);
+    --greenBackground: rgba(23, 191, 99, 0.1);
 }
 
-html, body {
+html,
+body {
     height: 100%;
     min-height: 100%;
     background-color: #fff;
@@ -24,9 +27,10 @@ ul {
     margin: 0;
 }
 
-* {
+
+/* * {
     outline: none !important;
-}
+} */
 
 a {
     color: inherit;
@@ -78,7 +82,7 @@ nav a:hover {
     height: 100%;
 }
 
-.wrapper > .row {
+.wrapper>.row {
     margin: 0;
     height: 100%;
 }
@@ -95,7 +99,7 @@ button span {
 }
 
 .mainSectionContainer {
-    padding:  0;
+    padding: 0;
     border-left: 1px solid var(--lightGrey);
     border-right: 1px solid var(--lightGrey);
     display: flex;
@@ -143,6 +147,12 @@ button span {
     background-color: white;
 }
 
+#userImage {
+    width: 8%;
+    border-radius: 50%;
+    background-color: white;
+}
+
 .textareaContainer {
     flex: 1;
     padding-left: var(--spacing);
@@ -180,6 +190,8 @@ button span {
     flex: 1;
     display: flex;
     overflow-y: hidden;
+    margin-top: 100px;
+    display: none;
 }
 
 .postContentContainer {
@@ -289,7 +301,6 @@ button span {
     margin-left: var(--spacing);
     position: absolute;
     bottom: -66px;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -399,7 +410,7 @@ button span {
 .coverPhotoButton {
     position: absolute;
     font-size: 50px;
-    color: rgba(0,0,0,0.6);
+    color: rgba(0, 0, 0, 0.6);
     display: none;
 }
 
@@ -425,7 +436,6 @@ button span {
 #coverPreview {
     width: 100%;
     display: block;
- 
     /* This rule is very important, please don't ignore this */
     max-width: 100%;
 }
@@ -440,7 +450,7 @@ button span {
 }
 
 .pinnedPostContainer {
-    border-bottom: 10px solid rgb(230,236,240);
+    border-bottom: 10px solid rgb(230, 236, 240);
 }
 
 .searchBarContainer {
@@ -613,7 +623,7 @@ button span {
 .chatContainer .footer textarea {
     flex: 1;
     resize: none;
-    background-color: rgba(0,0,0,0.05);
+    background-color: rgba(0, 0, 0, 0.05);
     border-radius: 18px;
     border: none;
     padding: 8px 12px;
@@ -753,7 +763,7 @@ button span {
 }
 
 .senderName {
-    color: rgba(0,0,0,0.4);
+    color: rgba(0, 0, 0, 0.4);
 }
 
 .chatMessages .imageContainer {
@@ -820,9 +830,9 @@ button span {
     right: 5px;
     width: 350px;
     background-color: white;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
-    -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
-    -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 #notificationList .active {
