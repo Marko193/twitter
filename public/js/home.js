@@ -13,6 +13,6 @@ function outputPosts(results, container) {
     });
 
     if (results.length == 0) {
-        container.append("<span class='noResults'>No tweets :-(</span>");
+        container.append("");
     }
 }
