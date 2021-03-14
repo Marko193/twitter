@@ -15,7 +15,7 @@ router.get("/", (req, res, next) => {
     res.status(200).render("register");
 })
 
-router.post("/", async(req, res, next) => {
+router.post("/", async (req, res, next) => {
 
     var firstName = req.body.firstName.trim();
     var lastName = req.body.lastName.trim();
@@ -25,39 +25,42 @@ router.post("/", async(req, res, next) => {
 
     var payload = req.body;
 
-    if (firstName && lastName && username && email && password) {
+    if(firstName && lastName && username && email && password) {
         var user = await User.findOne({
-                $or: [
-                    { username: username },
-                    { email: email }
-                ]
-            })
-            .catch((error) => {
-                console.log(error);
-                payload.errorMessage = "Something went wrong.";
-                res.status(200).render("register", payload);
-            });
+            $or: [
+                { username: username },
+                { email: email }
+            ]
+        })
+        .catch((error) => {
+            console.log(error);
+            payload.errorMessage = "Something went wrong.";
+            res.status(200).render("register", payload);
+        });
 
-        if (user == null) {
+        if(user == null) {
             // No user found
             var data = req.body;
             data.password = await bcrypt.hash(password, 10);
 
             User.create(data)
-                .then((user) => {
-                    req.session.user = user;
-                    return res.redirect("/");
-                })
-        } else {
+            .then((user) => {
+                req.session.user = user;
+                return res.redirect("/");
+            })
+        }
+        else {
             // User found
             if (email == user.email) {
                 payload.errorMessage = "Email already in use.";
-            } else {
+            }
+            else {
                 payload.errorMessage = "Username already in use.";
             }
             res.status(200).render("register", payload);
         }
-    } else {
+    }
+    else {
         payload.errorMessage = "Make sure each field has a valid value.";
         res.status(200).render("register", payload);
     }

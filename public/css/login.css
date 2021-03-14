@@ -15,9 +15,9 @@ body {
     border: 1px solid #dedede;
     background-color: #fff;
     text-align: center;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
 
 form {
@@ -41,9 +41,4 @@ input[type="submit"] {
     border: none;
     border-radius: 2px;
     margin-bottom: 10px;
-}
-
-p.errorMessage {
-    color: red;
-    font-weight: bold;
 }
